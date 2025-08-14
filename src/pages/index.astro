@@ -2,10 +2,12 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Obtenemos los 3 posts más recientes para mostrarlos
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 3);
+
+// Definimos la variable base para usarla en los enlaces
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 <BaseLayout title="Inicio">
   <!-- 1. SECCIÓN HÉROE -->
@@ -27,7 +29,7 @@ const posts = (await getCollection('blog')).sort(
     <h2 class="text-4xl font-bold text-center mb-12 dark:text-white">Desde las Trincheras: Artículos Clave</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {posts.map(post => (
-        <a href={`/blog/${post.slug}/`} class="block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+        <a href=`${BASE_URL}blog/${post.slug}/` class="block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
           <img src={post.data.heroImage} alt="" class="w-full h-48 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2 dark:text-white">{post.data.title}</h3>

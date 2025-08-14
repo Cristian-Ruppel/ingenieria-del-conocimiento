@@ -6,6 +6,9 @@ interface Props {
   title: string;
 }
 const { title } = Astro.props;
+
+// Definimos la variable base para usarla en los enlaces
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="es">
@@ -14,7 +17,6 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Ingeniería del Conocimiento</title>
     <script is:inline>
-      // Este script evita el "flash" de cambio de tema al recargar. SOLO DEBE ESTAR UNA VEZ.
       if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
@@ -27,15 +29,15 @@ const { title } = Astro.props;
       
       <header class="mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">
         <div class="w-full flex justify-between items-center">
-          <a href="/" class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Ingeniería del Conocimiento</a>
+          <a href={BASE_URL} class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Ingeniería del Conocimiento</a>
           
           <div class="flex items-center gap-x-2 sm:gap-x-4">
             <nav class="hidden md:flex gap-x-6">
-              <a href="/" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Inicio</a>
-              <a href="/blog" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Blog</a>
-              <a href="/glosario" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</a>
-              <a href="/newsletter" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Newsletter</a>
-              <a href="/acerca-de" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors whitespace-nowrap">Acerca de</a>
+              <a href={BASE_URL} class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Inicio</a>
+              <a href=`${BASE_URL}blog` class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Blog</a>
+              <a href=`${BASE_URL}glosario` class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</a>
+              <a href=`${BASE_URL}newsletter` class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Newsletter</a>
+              <a href=`${BASE_URL}acerca-de` class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors whitespace-nowrap">Acerca de</a>
             </nav>
             
             <ThemeToggle />
@@ -43,11 +45,11 @@ const { title } = Astro.props;
         </div>
         
         <nav class="md:hidden mt-4 flex gap-x-4 justify-center">
-          <a href="/" class="text-base text-gray-600 dark:text-gray-300">Inicio</a>
-          <a href="/blog" class="text-base text-gray-600 dark:text-gray-300">Blog</a>
-          <a href="/glosario" class="text-base text-gray-600 dark:text-gray-300">Glosario</a>
-          <a href="/newsletter" class="text-base text-gray-600 dark:text-gray-300">Newsletter</a>
-          <a href="/acerca-de" class="text-base text-gray-600 dark:text-gray-300">Acerca de</a>
+          <a href={BASE_URL} class="text-base text-gray-600 dark:text-gray-300">Inicio</a>
+          <a href=`${BASE_URL}blog` class="text-base text-gray-600 dark:text-gray-300">Blog</a>
+          <a href=`${BASE_URL}glosario` class="text-base text-gray-600 dark:text-gray-300">Glosario</a>
+          <a href=`${BASE_URL}newsletter` class="text-base text-gray-600 dark:text-gray-300">Newsletter</a>
+          <a href=`${BASE_URL}acerca-de` class="text-base text-gray-600 dark:text-gray-300">Acerca de</a>
         </nav>
       </header>
       

@@ -2,13 +2,16 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const posts = await getCollection('blog');
+
+// Definimos la variable base para usarla en los enlaces
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 <BaseLayout title="Blog">
   <h1 class="text-4xl font-bold mb-6 dark:text-white">Archivo del Blog</h1>
   <ul>
     {posts.map((post) => (
       <li class="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
-        <a href={`/blog/${post.slug}/`} class="text-2xl text-blue-700 hover:underline font-bold dark:text-blue-400">
+        <a href=`${BASE_URL}blog/${post.slug}/` class="text-2xl text-blue-700 hover:underline font-bold dark:text-blue-400">
           {post.data.title}
         </a>
         <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
