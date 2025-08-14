@@ -1,9 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const posts = await getCollection('blog');
 
-// Definimos la variable base para usarla en los enlaces
+// Obtenemos TODOS los posts y los ORDENAMOS por fecha, del más nuevo al más viejo
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
 const BASE_URL = import.meta.env.BASE_URL;
 ---
 <BaseLayout title="Blog">
