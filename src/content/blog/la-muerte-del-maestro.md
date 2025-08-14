@@ -2,7 +2,7 @@
 title: 'La Muerte del Maestro: Por Qué Nadie Quiere Educar a Tus Hijos (y la Verdad que el Sistema Oculta)'
 description: 'La vocación docente se ahoga en un mar de precarización, desprecio y abandono. Descubre las 3 hemorragias que desangran la profesión y cómo blindar a tus hijos.'
 pubDate: '2025-08-13'
-heroImage: '/articulo-2.png'
+heroImage: 'articulo-2.png'
 ---
 
 Cierra los ojos por un instante. Vuelve a tu propia infancia. Probablemente recuerdes a tu maestra como una figura de autoridad casi mítica, una extensión del hogar. Si ella te retaba, tus padres te retaban el doble en casa. Existía un pacto no escrito, un vínculo sólido entre la familia y la escuela, basado en un respeto mutuo por la misión de educar. El maestro, como el médico, era un pilar de la comunidad.

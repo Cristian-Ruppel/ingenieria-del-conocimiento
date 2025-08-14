@@ -2,7 +2,7 @@
 title: 'La Gran Estafa de las 70 Palabras por Minuto'
 description: 'Por qué el sistema educativo te condenó a leer mal y cómo puedes liberarte.'
 pubDate: '2025-08-12'
-heroImage: '/articulo-1.png'
+heroImage: 'articulo-1.png'
 ---
 Trece años. Has pasado trece años de tu vida, desde los cinco hasta los dieciocho, sumergido en un sistema educativo cuyo vehículo principal, en el 90% de las materias, es la lectoescritura. Es la herramienta sobre la que se construyó todo tu conocimiento formal. Después de semejante maratón, la lógica dicta que deberías haber emergido como un maestro lector, ¿verdad?
 
