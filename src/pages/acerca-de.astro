@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Acerca de Mí">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 md:p-12">
+    <div class="flex flex-col md:flex-row gap-12 items-center">
+      <!-- Imagen de Perfil -->
+      <div class="md:w-1/3 text-center">
+        <img src="/cristian-ruppel-perfil.jpg" alt="Cristian Marcos Ruppel" class="w-48 h-48 rounded-full mx-auto shadow-2xl object-cover" />
+        <h2 class="text-3xl font-bold mt-6 dark:text-white">Cristian M. Ruppel</h2>
+        <p class="text-gray-500 dark:text-gray-400 mt-1">Fundador de Ingeniería del Conocimiento</p>
+      </div>
+
+      <!-- El Manifiesto -->
+      <div class="md:w-2/3">
+        <article class="prose lg:prose-xl max-w-none dark:prose-invert">
+          <h1>Mi Historia es un Viaje de Construcción</h1>
+          
+          <p>Desde muy joven entendí una verdad simple: si quieres que algo se haga bien, a menudo tienes que aprender a hacerlo tú mismo. Crecí en un entorno donde los recursos eran escasos, pero los sueños eran de una arquitectura sólida. Y esa filosofía me ha guiado en cada paso de mi vida.</p>
+
+          <p>Mi viaje nunca fue sobre acumular títulos, sino sobre una búsqueda obsesiva por entender cómo funcionan las cosas para poder construirlas mejor. Mi primera revelación llegó en la adolescencia, al comprender el enorme peso que tiene la imagen en la vida de las personas. Por eso, decidí ser "Profesor de Artes Visuales": para ayudar a las futuras generaciones a desarrollar su sistema visual, a filtrar las imágenes del mundo y a descodificar los mensajes que emiten.</p>
+
+          <p>Dentro del sistema, tuve la inmensa fortuna de encontrar a un mentor extraordinario: Hernán Augusto "Tato" Osorio. Un hombre que me enseñó que la verdadera educación no consiste en acumular respuestas, sino en enamorarse de las preguntas correctas. Me legó una idea fundamental: "Un maestro transmite contenidos; un profesor es un investigador que va más allá: enseña a Aprender a Aprender".</p>
+          
+          <p>Poco antes de fallecer, lo visité en su casa. Esa tarde, su hija llegó con dos cachorros. Tato tomó al macho y me lo regaló. En su honor, mi perro se llama Sócrates, y es mi recordatorio diario de esa misión. Quizás algo de ese gran maestro late en él... ¿quién puede saberlo?</p>
+
+          <p>Al empezar a trabajar en las escuelas, noté una profunda desconexión. Las cosas no estaban diseñadas para el perfil pedagógico en el que me habían formado. Esa constante incomodidad me empujó a estudiar la "Licenciatura en Educación", para entender el devenir histórico de la escuela, detectar sus incongruencias y poder proyectar una nueva. Y ahora, mi viaje continúa con el "Desarrollo Web", para construir las herramientas de esa nueva era.</p>
+          
+          <p><strong>Ingeniería del Conocimiento</strong> es el resultado de ese viaje. No nace del rencor, sino de la convicción. Es el arsenal de herramientas, planos y estrategias que he forjado para ofrecerte una vía alternativa y soberana. El sistema educativo actual transita la mayor crisis de su historia, y sus tiempos burocráticos están completamente desfasados de la realidad. Por eso, una buena decisión es tomar el toro por las astas y, como familia, trabajar activamente en la educación de nuestros hijos.</p>
+
+        </article>
+      </div>
+    </div>
+  
+    <!-- INICIO DE LA SECCIÓN ACTUALIZADA: MI CAJA DE HERRAMIENTAS -->
+    <div class="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
+      <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Mi Caja de Herramientas: Una Formación Multidisciplinar</h2>
+      <div class="space-y-8">
+        
+        <!-- Hito 1: Artes Visuales -->
+        <div class="flex items-start gap-6">
+          <div class="flex-shrink-0">
+            <img src="/logo-biagetti.png" alt="Logo Esc. de Artes Alcides Biagetti" class="h-16 w-16 object-contain bg-white rounded-full p-1">
+          </div>
+          <div>
+            <h3 class="text-xl font-bold dark:text-white">Profesor de Artes Visuales (Orientación en Grabado)</h3>
+            <p class="text-gray-600 dark:text-gray-400 italic">Esc. de Artes Alcides Biagetti, Carmen de Patagones (2005-2017)</p>
+            <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">Título Serie 2017, N° 00721906. Validez Nacional (Res. N° 1810/14).</p>
+            <p class="mt-2 text-gray-800 dark:text-gray-300">
+              <strong>La Herramienta de la Visión:</strong> Aquí aprendí a descodificar el lenguaje de las imágenes. Esta formación me permite enseñarte a ver el mundo con una nueva profundidad y a no ser influenciado por mensajes visuales que no comprendes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hito 2: Investigación Educativa -->
+        <div class="flex items-start gap-6">
+          <div class="flex-shrink-0">
+            <img src="/logo-unrn.png" alt="Logo Universidad de Río Negro" class="h-16 w-16 object-contain">
+          </div>
+          <div>
+            <h3 class="text-xl font-bold dark:text-white">Licenciado en Educación</h3>
+            <p class="text-gray-600 dark:text-gray-400 italic">Universidad Nacional de Río Negro, Sede Atlántica (2019-2021)</p>
+            <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">Título Serie 2021, N° 0002578. Legajo UNRN-31035.</p>
+            <p class="mt-2 text-gray-800 dark:text-gray-300">
+              <strong>La Herramienta del Diagnóstico:</strong> Esta es la lente de alta precisión que me permite analizar el sistema educativo, identificar sus fallas estructurales y entender la raíz de los problemas de aprendizaje, más allá de los síntomas superficiales.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hito 3: Desarrollo Web -->
+        <div class="flex items-start gap-6">
+          <div class="flex-shrink-0">
+            <img src="/logo-comahue.png" alt="Logo Universidad del Comahue" class="h-16 w-16 object-contain bg-white rounded-md p-1">
+          </div>
+          <div>
+            <h3 class="text-xl font-bold dark:text-white">Tecnicatura Universitaria en Desarrollo Web</h3>
+            <p class="text-gray-600 dark:text-gray-400 italic">Universidad Nacional del Comahue (C.U.R.Z.A - en curso)</p>
+            <p class="mt-2 text-gray-800 dark:text-gray-300">
+              <strong>La Herramienta de la Construcción:</strong> El conocimiento del sistema está obsoleto si no podemos construir las nuevas soluciones. Esta formación me da la habilidad para crear las plataformas y herramientas digitales que nos permitirán edificar el futuro del aprendizaje.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- FIN DE LA SECCIÓN ACTUALIZADA -->
+  
+    <div class="text-center mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
+      <h2 class="text-2xl font-bold dark:text-white">¿Listo para empezar a construir?</h2>
+      <p class="text-base text-gray-600 dark:text-gray-400">El primer ladrillo es el más importante. Descarga el Kit de Herramientas y empieza hoy.</p>
+      <a href="https://subscribepage.io/t3S0HE" class="mt-4 inline-block bg-black text-white font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition-transform transform hover:scale-105">
+        Obtener el Kit Gratis
+      </a>
+    </div>
+
+  </div>
+</BaseLayout>

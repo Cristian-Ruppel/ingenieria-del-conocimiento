@@ -1,16 +1,50 @@
 ---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Obtenemos los 3 posts más recientes para mostrarlos
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3);
 ---
+<BaseLayout title="Inicio">
+  <!-- 1. SECCIÓN HÉROE -->
+ <section class="flex flex-col items-center text-center py-20">
+    <h1 class="text-5xl font-bold text-gray-900 dark:text-white">El sistema educativo le falló. Tú no tienes por qué hacerlo.</h1>
+    <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">Descubre las herramientas que el colegio nunca le enseñará para construir una mente brillante y autónoma.</p>
+    <a href="https://subscribepage.io/t3S0HE" class="mt-8 inline-block bg-blue-700 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
+      Descarga el KIT GRATIS
+    </a>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <!-- 2. DECLARACIÓN DE PRINCIPIOS -->
+  <section class="bg-gray-200 dark:bg-gray-700 py-8 text-center">
+    <p class="text-2xl font-semibold text-gray-800 dark:text-gray-100">"Desmantelando el sistema para liberar el potencial humano."</p>
+  </section>
+
+  <!-- 3. LA SOLUCIÓN (ARTÍCULOS DESTACADOS) -->
+  <section class="py-20">
+    <h2 class="text-4xl font-bold text-center mb-12 dark:text-white">Desde las Trincheras: Artículos Clave</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {posts.map(post => (
+        <a href={`/blog/${post.slug}/`} class="block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+          <img src={post.data.heroImage} alt="" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 dark:text-white">{post.data.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300">{post.data.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- 4. CTA FINAL -->
+  <section class="flex flex-col items-center text-center py-20">
+    <h2 class="text-4xl font-bold dark:text-white">¿Listo para ser el guía que tu hijo necesita?</h2>
+    <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">El primer paso es el más importante. Descarga el Kit de Herramientas y empieza la transformación hoy.</p>
+    <a href="https://subscribepage.io/t3S0HE" class="mt-8 inline-block bg-blue-700 text-white font-bold text-lg py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
+      Obtener mi Kit de Herramientas GRATIS
+    </a>
+  </section>
+
+</BaseLayout>

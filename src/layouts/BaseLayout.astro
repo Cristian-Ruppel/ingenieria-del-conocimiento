@@ -1,0 +1,74 @@
+---
+import ThemeToggle from '../components/ThemeToggle.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | Ingeniería del Conocimiento</title>
+    <script is:inline>
+      // Este script evita el "flash" de cambio de tema al recargar. SOLO DEBE ESTAR UNA VEZ.
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      
+      <header class="mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">
+        <div class="w-full flex justify-between items-center">
+          <a href="/" class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Ingeniería del Conocimiento</a>
+          
+          <div class="flex items-center gap-x-2 sm:gap-x-4">
+            <nav class="hidden md:flex gap-x-6">
+              <a href="/" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Inicio</a>
+              <a href="/blog" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Blog</a>
+              <a href="/glosario" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Glosario</a>
+              <a href="/newsletter" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Newsletter</a>
+              <a href="/acerca-de" class="text-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors whitespace-nowrap">Acerca de</a>
+            </nav>
+            
+            <ThemeToggle />
+          </div>
+        </div>
+        
+        <nav class="md:hidden mt-4 flex gap-x-4 justify-center">
+          <a href="/" class="text-base text-gray-600 dark:text-gray-300">Inicio</a>
+          <a href="/blog" class="text-base text-gray-600 dark:text-gray-300">Blog</a>
+          <a href="/glosario" class="text-base text-gray-600 dark:text-gray-300">Glosario</a>
+          <a href="/newsletter" class="text-base text-gray-600 dark:text-gray-300">Newsletter</a>
+          <a href="/acerca-de" class="text-base text-gray-600 dark:text-gray-300">Acerca de</a>
+        </nav>
+      </header>
+      
+      <main>
+        <slot />
+      </main>
+      
+      <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-500 dark:text-gray-400">
+        <div class="mb-4 flex justify-center gap-x-6">
+          <a href="https://ar.pinterest.com/cristianmarcosruppel/" target="_blank" aria-label="Perfil de Pinterest" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.104 3.161 9.423 7.555 11.176-.118-.933-.217-2.331.028-3.327.234-.948 1.509-6.378 1.509-6.378s-.38-.76-.38-1.884c0-1.761 1.021-3.08 2.298-3.08 1.082 0 1.604.811 1.604 1.785 0 1.087-.692 2.712-1.043 4.21-.293 1.228.613 2.228 1.838 2.228 2.202 0 3.896-2.348 3.896-5.741 0-2.986-2.088-5.02-5.111-5.02-3.41 0-5.393 2.541-5.393 5.148 0 .971.371 2.011.831 2.593.093.118.106.217.079.333-.081.356-.266 1.072-.329 1.328-.083.344-.395.448-.707.319-1.391-.564-2.26-2.028-2.26-3.645 0-2.812 2.569-6.22 7.031-6.22 3.693 0 6.556 2.659 6.556 5.438 0 3.84-2.352 6.883-5.632 6.883-1.096 0-2.134-.567-2.49-1.233L12 24c-1.488-.139-2.883-.545-4.145-1.176C5.587 20.48 4.095 16.5 4.095 12 4.095 7.643 7.643 4.095 12 4.095S19.905 7.643 19.905 12c0 4.5-3.51 8.243-8.055 8.733.347-1.571.498-3.213.498-4.908z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Lic.Cristian.Ruppel" target="_blank" aria-label="Canal de YouTube" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/cristian-marcos-ruppel-3a9609235" target="_blank" aria-label="Perfil de LinkedIn" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </div>
+        <p>© {new Date().getFullYear()} Cristian Marcos Ruppel. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  </body>
+</html>

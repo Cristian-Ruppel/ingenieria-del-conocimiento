@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const terminos = [
+  {
+    termino: "Aprender a Aprender",
+    definicion: "La meta habilidad fundamental. No se trata de qué aprender, sino de dominar el proceso del aprendizaje en sí mismo. Es pasar de ser un consumidor de información a un arquitecto del conocimiento.",
+    etimologia: "Del latín 'apprehendere', que significa 'agarrar' o 'percibir'. Implica un acto activo de tomar el conocimiento, no de recibirlo pasivamente."
+  },
+  {
+    termino: "Currículum Oculto",
+    definicion: "El conjunto de lecciones no escritas que la escuela enseña a través de su estructura y rituales: obediencia, conformidad y pasividad. A menudo, es la lección más duradera y perjudicial.",
+    etimologia: "Del latín 'curriculum' (carrera, curso) y 'occultus' (escondido, secreto). Se refiere a la 'carrera' de aprendizaje que ocurre en secreto, paralela a la oficial."
+  },
+  {
+    termino: "Educación Bancaria",
+    definicion: "Concepto acuñado por Paulo Freire. Describe un modelo educativo donde el profesor 'deposita' conocimiento en la 'cuenta' vacía del alumno, tratándolo como un recipiente pasivo en lugar de un creador activo.",
+    etimologia: "Una metáfora moderna que equipara el conocimiento a dinero y la mente a un banco, criticando la deshumanización del proceso educativo."
+  },
+  {
+    termino: "Salto Sacádico",
+    definicion: "El movimiento natural, rápido y espasmódico que realizan los ojos al leer. En lugar de un barrido suave, el ojo 'salta' y se detiene en fijaciones para captar bloques de palabras. Las técnicas de lectura veloz se basan en optimizar estos saltos."
+  },
+  {
+    termino: "Visión Periférica (en Lectura)",
+    definicion: "La capacidad del ojo de captar palabras a los lados del punto de fijación central. Una habilidad crucial para la lectura rápida que el método tradicional de enseñanza anula al forzar una fijación por cada palabra."
+  },
+  {
+    termino: "Adultez Emergente",
+    definicion: "Fenómeno sociológico que describe la prolongación de la adolescencia hasta bien entrada la veintena (o incluso los 30). El sistema educativo, sin embargo, sigue operando bajo la premisa obsoleta de que un joven de 18 años es un adulto plenamente funcional."
+  },
+  {
+    termino: "Inercia Pedagógica",
+    definicion: "La resistencia institucional al cambio dentro del sistema educativo. Es la tendencia a preferir la comodidad de los métodos obsoletos y probados antes que la incertidumbre de la innovación, incluso cuando la evidencia demuestra que el sistema actual no funciona."
+  },
+  {
+    termino: "Palacio Mental (Método Loci)",
+    definicion: "Una técnica de memorización mnemotécnica que se remonta a la antigua Grecia. Consiste en asociar la información que se desea recordar con lugares específicos dentro de un espacio físico familiar imaginado (un palacio, tu casa), permitiendo una retención a largo plazo casi perfecta.",
+    etimologia: "Del latín 'loci' (lugares). La técnica se basa en la capacidad natural del cerebro humano para recordar lugares con gran detalle."
+  },
+  {
+    termino: "Pensamiento Crítico",
+    definicion: "No es simplemente 'pensar mucho'. Es la habilidad de analizar la información de forma objetiva, identificar sesgos, detectar falacias lógicas y evaluar la evidencia antes de formar un juicio. Es la principal herramienta de la autodefensa intelectual.",
+    etimologia: "Del griego 'krinein' (separar, decidir, juzgar). Implica la acción de 'separar el grano de la paja' en un argumento para llegar a un juicio bien fundamentado."
+  },
+  {
+    termino: "Alfabetización Mediática",
+    definicion: "La capacidad de acceder, analizar, evaluar y crear comunicación en una variedad de formas. En la era digital, es una habilidad de supervivencia esencial para navegar la desinformación y la propaganda."
+  },
+  {
+    termino: "Sesgo de Confirmación",
+    definicion: "La tendencia natural de nuestro cerebro a buscar, interpretar y recordar información que confirma nuestras creencias preexistentes, mientras ignora la evidencia que las contradice. Es una de las 'cadenas' más fuertes de la Caverna Digital."
+  },
+  {
+    termino: "Alegoría de la Caverna (Platón)",
+    definicion: "Una de las metáforas más poderosas de la filosofía occidental. Describe a prisioneros que solo han visto sombras proyectadas en una pared y las toman por la realidad. Simbliza la condición humana y la difícil tarea de ascender hacia el verdadero conocimiento."
+  }
+];
+---
+<BaseLayout title="Glosario de Términos Educativos y Técnicas de Estudio">
+  <div class="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-lg shadow-xl">
+    <h1 class="text-4xl font-bold mb-4 dark:text-white">Glosario de la Liberación Intelectual</h1>
+    <p class="mb-12 text-lg text-gray-600 dark:text-gray-300">Un diccionario de los conceptos clave de pedagogía crítica, neurociencia y técnicas de estudio que necesitas para construir una mente soberana.</p>
+
+    <div class="space-y-10">
+      {terminos.sort((a, b) => a.termino.localeCompare(b.termino)).map(item => (
+        <div id={item.termino.toLowerCase().replace(/ /g, '-')} class="border-t border-gray-200 dark:border-gray-700 pt-6">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{item.termino}</h2>
+          <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">{item.definicion}</p>
+          {item.etimologia && (
+            <p class="mt-4 text-sm italic text-gray-500 dark:text-gray-400 border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+              <strong>Etimología:</strong> {item.etimologia}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
