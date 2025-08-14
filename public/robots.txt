@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cristian-ruppel.github.io/ingenieria-del-conocimiento/sitemap-index.xml
