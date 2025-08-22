@@ -2,7 +2,7 @@
 title: 'La Paradoja del Aula: ¿Prepara la Escuela para la Sociedad o para un Mundo Artificial?'
 description: 'La escuela promete educar para la vida en sociedad, pero sus reglas internas a menudo enseñan lo contrario. Un análisis de la gran contradicción del sistema.'
 pubDate: '2025-08-15'
-heroImage: 'articulo-7.png'
+heroImage: 'articulo-4.webp'
 ---
 
 Hay un mantra que se repite hasta el cansancio en cada acto escolar y en cada documento curricular: "La escuela educa para la vida en sociedad". Es su promesa fundacional, su contrato con las familias. Pero si observamos con la mirada fría de un analista, nos encontramos con una verdad perturbadora.

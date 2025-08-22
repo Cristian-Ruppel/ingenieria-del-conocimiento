@@ -2,7 +2,7 @@
 title: 'El Fantasma en el Aula: Por Qué la Escuela Está Diseñada para un Alumno que Ya No Existe'
 description: 'La escuela actual es un museo dedicado a un sujeto social extinguido. Descubre las 3 fallas tectónicas que quebraron el sistema y por qué tu hijo no encaja.'
 pubDate: '2025-08-14'
-heroImage: 'articulo-3.png'
+heroImage: 'articulo-3.webp'
 ---
 
 Imagina que entras a un museo perfectamente conservado. Cada vitrina, cada herramienta, cada mapa en la pared, todo está impecablemente dispuesto. Hay un solo problema: el museo está dedicado a una civilización que desapareció hace cien años. Sus herramientas ya no sirven, sus mapas llevan a territorios que han mutado, sus normas sociales nos resultan ajenas.Ese museo es la escuela actual.

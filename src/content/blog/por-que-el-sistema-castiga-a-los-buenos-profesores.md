@@ -2,7 +2,7 @@
 title: '¿Por Qué el Sistema Educativo Castiga a los Buenos Profesores?'
 description: 'La lógica, la confianza y la innovación a menudo son vistas como actos de rebeldía en el aula. Un análisis de por qué el sistema parece marginar a sus mejores docentes.'
 pubDate: '2025-08-17'
-heroImage: 'articulo-9.png'
+heroImage: 'articulo-6.webp'
 ---
 
 Existe una paradoja dolorosa en el corazón del sistema educativo. Mientras todos afirmamos valorar la innovación, el pensamiento crítico y la pasión por enseñar, la estructura misma de la escuela a menudo parece castigar precisamente a los docentes que encarnan estas virtudes.

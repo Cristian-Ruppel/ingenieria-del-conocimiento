@@ -2,7 +2,7 @@
 title: 'El Aula Desincronizada: Por Qué la Burocracia Ancló la Escuela en el Pasado'
 description: 'La velocidad de la cultura digital choca con los tiempos paquidérmicos de la burocracia educativa. Un análisis sobre cómo esta fractura temporal se convierte en la mayor oportunidad para el docente innovador.'
 pubDate: '2025-08-19'
-heroImage: 'articulo-10.png'
+heroImage: 'articulo-7.webp'
 ---
 Existe un desajuste de ritmos, casi un jet lag cultural, en el aula moderna. Un estudiante del siglo XXI, cuya mente opera a la velocidad de la red, se sienta en una estructura organizativa que aún se mueve con la cadencia del siglo XIX. El problema no es la falta de vocación de los docentes ni la falta de potencial de los alumnos; el problema es que la institución y sus habitantes viven en husos horarios diferentes.
 Para entender esta fractura, debemos mirar el origen y la inercia del sistema. La escuela, desde su concepción industrial, fue diseñada para la estandarización. Un modelo predecible para una sociedad predecible. El problema no es su origen, sino su petrificación. La maquinaria que se construyó para mantenerla en funcionamiento —la burocracia— se ha convertido en su ancla.

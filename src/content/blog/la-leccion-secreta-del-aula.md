@@ -2,7 +2,7 @@
 title: 'La Lección Más Importante que tu Hijo Aprende en la Escuela (y que No Está en los Libros)'
 description: 'Debajo del currículum formal se esconde uno oculto que enseña sumisión y pasividad. Descubre las 3 lecciones secretas y cómo contrarrestarlas.'
 pubDate: '2025-08-16'
-heroImage: 'articulo-8.png'
+heroImage: 'articulo-5.webp'
 ---
 
 Imagina que la educación de tu hijo es un iceberg. En la superficie, visible para todos, está el currículum formal: matemáticas, lengua, historia. Es el 10% del iceberg. Pero debajo del agua, masiva e invisible, se esconde la verdadera estructura que da forma a su mente: el "currículum oculto".

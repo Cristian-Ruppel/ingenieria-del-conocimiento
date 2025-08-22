@@ -2,7 +2,7 @@
 title: 'El Valor Latente del Aula: Cómo Escalar tu Impacto Profesional Más Allá del Horario Escolar'
 description: 'La experiencia de un docente es uno de los activos más valiosos y subutilizados. Una hoja de ruta para transformar la práctica del aula en una carrera de consultoría y liderazgo de opinión a través de una plataforma digital propia.'
 pubDate: '2025-08-21'
-heroImage: 'articulo-11.png'
+heroImage: 'articulo-8.webp'
 ---
 Dentro de cada docente experimentado yace un profundo capital de conocimiento, un activo invisible forjado en la trinchera diaria del aula. Años de práctica, de resolver desafíos pedagógicos complejos, de adaptar la teoría a la impredecible realidad de los estudiantes, construyen una sabiduría que es, en esencia, de un valor incalculable. Sin embargo, el modelo profesional tradicional, con su estructura y sus límites, a menudo confina el alcance de este formidable activo a las cuatro paredes de la escuela.
 El paradigma convencional opera bajo una lógica lineal y predecible: el impacto de un docente se mide por el número de alumnos que tiene en un ciclo lectivo y su crecimiento es una escalera de antigüedad. Es un modelo noble y fundamental, la columna vertebral de nuestro sistema, pero no fue diseñado para reflejar el potencial exponencial que la experiencia educativa ha adquirido en la era digital. La pregunta que muchos profesionales se hacen en silencio no es si aman su vocación, sino cómo pueden ampliar su impacto y su horizonte profesional sin abandonarla.
